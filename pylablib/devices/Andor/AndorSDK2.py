@@ -166,7 +166,7 @@ class AndorSDK2Camera(camera.IBinROICamera, camera.IExposureCamera):
                 self._start_temperature=trng[0]+int((trng[1]-trng[0])*0.2)
             else:
                 self._start_temperature=0
-            self.set_temperature(self._start_temperature,enable_cooler=True)
+        self.set_temperature(self._start_temperature,enable_cooler=True)
     def _initial_setup_ext_trigger(self):
         try:
             lrng=self.get_trigger_level_limits()
